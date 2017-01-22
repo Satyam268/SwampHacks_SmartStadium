@@ -8,6 +8,51 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.bundle.js" type="text/javascript"></script>
+    <style>
+        table{
+            background-color: #F0F0F0;
+        }
+        body{
+            text-align: center;
+            font-family: sans-serif;
+            font-weight: 100;
+        }
+
+        h1{
+            color: #396;
+            font-weight: 100;
+            font-size: 40px;
+            margin: 40px 0px 20px;
+        }
+
+        #clockdiv{
+            font-family: sans-serif;
+            color: #fff;
+            display: inline-block;
+            font-weight: 100;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        #clockdiv > div{
+            padding: 10px;
+            border-radius: 3px;
+            background: #00BF96;
+            display: inline-block;
+        }
+
+        #clockdiv div > span{
+            padding: 15px;
+            border-radius: 3px;
+            background: #00816A;
+            display: inline-block;
+        }
+
+        .smalltext{
+            padding-top: 5px;
+            font-size: 16px;
+        }
+    </style>
 </head>
 
 <body>
@@ -18,15 +63,50 @@
     <div class="row" style="height:100%;">
         <div class="col-sm-6 col-md-6">
             <canvas id="myChart" width="200" height="100"></canvas>
+            <br><br>
+            <div class="row" id="biddingButtons">
+                <button type="button" class="btn btn-primary btn-sm" id="nikeBtn">Nike</button>
+                <button type="button" class="btn btn-primary btn-sm" id="pepsiBtn">Pepsi</button>
+                <button type="button" class="btn btn-primary btn-sm" id="gatoradeBtn">Gatorade</button>
+                <button type="button" class="btn btn-primary btn-sm" id="adidasBtn">Adidas</button>
+                <button type="button" class="btn btn-primary btn-sm" id="coronaBtn">Corona</button>
+                <button type="button" class="btn btn-primary btn-sm" id="heinekenBtn">Heineken</button>
+            </div>
+            <br><br>
+
+
+            <div id="biddingPortal" class="row">
+                <h3>Bidding Stats:</h3>
+                <div class="row">
+                    <label>Highest Bidder:</label>
+
+                </div>
+
+                <input type="text" id="bidderName"/>
+                <label>Amount:</label>
+                <input type="text" id="bidderAmt"/>
+            </div>
+
+
         </div>
 
         <div class="col-sm-6 col-md-6" id="stadium">
             <div id="topRow">
-                <table border="2">
+                <table border="1">
                     <tr class="row">
+                        <td height=30 width=30 rowspan="2" colspan="3"><img src="../public/images/exit.gif" height="60.76" width ="90.74"></td>
                         <td height=30 width=30></td>
                         <td height=30 width=30></td>
                         <td height=30 width=30></td>
+                        <td height=30 width=30></td>
+                        <td height=30 width=30></td>
+                        <td height=30 width=30></td>
+                        <td height=30 width=30></td>
+                        <td height=30 width=30></td>
+                        <td height=30 width=30></td>
+                        <td height=30 width=30 rowspan="2" colspan="3"><img src="../public/images/corner.png" height="60.76" width ="90.74"></td>
+                    </tr>
+                    <tr class="row">
                         <td height=30 width=30></td>
                         <td height=30 width=30></td>
                         <td height=30 width=30></td>
@@ -39,12 +119,73 @@
                     </tr>
 
                     <tr class="row">
+                        <td height=30 width=30 ></td>
+                        <td height=30 width=30></td>
+                        <td height=30 width=30></td>
+
+                        <td height=30 width=30 rowspan="9" colspan="9"><img src="../public/images/final.jpg" height="264.76" width ="267.74"></td>
+
+                        <td height=30 width=30></td>
+                        <td height=30 width=30></td>
+                        <td height=30 width=30></td>
+                    </tr>
+                    <tr class="row">
                         <td height=30 width=30></td>
                         <td height=30 width=30></td>
                         <td height=30 width=30></td>
                         <td height=30 width=30></td>
                         <td height=30 width=30></td>
                         <td height=30 width=30></td>
+                    </tr>
+                    <tr class="row">
+                        <td height=30 width=30></td>
+                        <td height=30 width=30></td>
+                        <td height=30 width=30></td>
+                        <td height=30 width=30></td>
+                        <td height=30 width=30></td>
+                        <td height=30 width=30></td>
+                    </tr>
+                    <tr class="row">
+                        <td height=30 width=30></td>
+                        <td height=30 width=30></td>
+                        <td height=30 width=30></td>
+                        <td height=30 width=30></td>
+                        <td height=30 width=30></td>
+                        <td height=30 width=30></td>
+                    </tr>
+                    <tr class="row">
+                        <td height=30 width=30></td>
+                        <td height=30 width=30></td>
+                        <td height=30 width=30></td>
+                        <td height=30 width=30></td>
+                        <td height=30 width=30></td>
+                        <td height=30 width=30></td>
+                    </tr>
+                    <tr class="row">
+                        <td height=30 width=30></td>
+                        <td height=30 width=30></td>
+                        <td height=30 width=30></td>
+                        <td height=30 width=30></td>
+                        <td height=30 width=30></td>
+                        <td height=30 width=30></td>
+                    </tr>
+                    <tr class="row">
+                        <td height=30 width=30></td>
+                        <td height=30 width=30></td>
+                        <td height=30 width=30></td>
+                        <td height=30 width=30></td>
+                        <td height=30 width=30></td>
+                        <td height=30 width=30></td>
+                    </tr>
+                    <tr class="row">
+                        <td height=30 width=30></td>
+                        <td height=30 width=30></td>
+                        <td height=30 width=30></td>
+                        <td height=30 width=30></td>
+                        <td height=30 width=30></td>
+                        <td height=30 width=30></td>
+                    </tr>
+                    <tr class="row">
                         <td height=30 width=30></td>
                         <td height=30 width=30></td>
                         <td height=30 width=30></td>
@@ -54,142 +195,8 @@
                     </tr>
 
                     <tr class="row">
-                        <td height=30 width=30></td>
-                        <td height=30 width=30></td>
-                        <td height=30 width=30></td>
-                        <td height=30 width=30></td>
-                        <td height=30 width=30></td>
-                        <td height=30 width=30></td>
-                        <td height=30 width=30></td>
-                        <td height=30 width=30></td>
-                        <td height=30 width=30></td>
-                        <td height=30 width=30></td>
-                        <td height=30 width=30></td>
-                        <td height=30 width=30></td>
-                    </tr>
+                        <td height=30 width=30 rowspan="2" colspan="3"><img src="../public/images/corner.png" height="60.76" width ="90.74"></td>
 
-                </table>
-            </div>
-
-            <div class="row" id="midrow">
-                <div class="col-sm-3 col-md-3" id="leftTable">
-                    <table border="2">
-                        <tr>
-                            <td height=30 width=30></td>
-                            <td height=30 width=30></td>
-                            <td height=30 width=30></td>
-                        </tr>
-                        <tr>
-                            <td height=30 width=30></td>
-                            <td height=30 width=30></td>
-                            <td height=30 width=30></td>
-                        </tr>
-                        <tr>
-                            <td height=30 width=30></td>
-                            <td height=30 width=30></td>
-                            <td height=30 width=30></td>
-                        </tr>
-                        <tr>
-                            <td height=30 width=30></td>
-                            <td height=30 width=30></td>
-                            <td height=30 width=30></td>
-                        </tr>
-                        <tr>
-                            <td height=30 width=30></td>
-                            <td height=30 width=30></td>
-                            <td height=30 width=30></td>
-                        </tr>
-                        <tr>
-                            <td height=30 width=30></td>
-                            <td height=30 width=30></td>
-                            <td height=30 width=30></td>
-                        </tr>
-                        <tr>
-                            <td height=30 width=30></td>
-                            <td height=30 width=30></td>
-                            <td height=30 width=30></td>
-                        </tr>
-                        <tr>
-                            <td height=30 width=30></td>
-                            <td height=30 width=30></td>
-                            <td height=30 width=30></td>
-                        </tr>
-                        <tr>
-                            <td height=30 width=30></td>
-                            <td height=30 width=30></td>
-                            <td height=30 width=30></td>
-                        </tr>
-                        <tr>
-                            <td height=30 width=30></td>
-                            <td height=30 width=30></td>
-                            <td height=30 width=30></td>
-                        </tr>
-                    </table>
-                </div>
-
-                <div class="col-md-6 col-sm-6" id="stadium">
-                    <img src="images/final.jpg" height="500" width="500" alt=""/>
-                </div>
-
-                <div class="col-md-3 col-sm-3" id="rightTable">
-                    <table border=2>
-                        <tr>
-                            <td height=30 width=30></td>
-                            <td height=30 width=30></td>
-                            <td height=30 width=30></td>
-                        </tr>
-                        <tr>
-                            <td height=30 width=30></td>
-                            <td height=30 width=30></td>
-                            <td height=30 width=30></td>
-                        </tr>
-                        <tr>
-                            <td height=30 width=30></td>
-                            <td height=30 width=30></td>
-                            <td height=30 width=30></td>
-                        </tr>
-                        <tr>
-                            <td height=30 width=30></td>
-                            <td height=30 width=30></td>
-                            <td height=30 width=30></td>
-                        </tr>
-                        <tr>
-                            <td height=30 width=30></td>
-                            <td height=30 width=30></td>
-                            <td height=30 width=30></td>
-                        </tr>
-                        <tr>
-                            <td height=30 width=30></td>
-                            <td height=30 width=30></td>
-                            <td height=30 width=30></td>
-                        </tr>
-                        <tr>
-                            <td height=30 width=30></td>
-                            <td height=30 width=30></td>
-                            <td height=30 width=30></td>
-                        </tr>
-                        <tr>
-                            <td height=30 width=30></td>
-                            <td height=30 width=30></td>
-                            <td height=30 width=30></td>
-                        </tr>
-                        <tr>
-                            <td height=30 width=30></td>
-                            <td height=30 width=30></td>
-                            <td height=30 width=30></td>
-                        </tr>
-                        <tr>
-                            <td height=30 width=30></td>
-                            <td height=30 width=30></td>
-                            <td height=30 width=30></td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-
-            <div class="row" id="bottomTable">
-                <table border="2" style="width:100%; margin:auto;">
-                    <tr class="row">
                         <td height=30 width=30></td>
                         <td height=30 width=30></td>
                         <td height=30 width=30></td>
@@ -199,10 +206,7 @@
                         <td height=30 width=30></td>
                         <td height=30 width=30></td>
                         <td height=30 width=30></td>
-                        <td height=30 width=30></td>
-                        <td height=30 width=30></td>
-                        <td height=30 width=30></td>
-
+                        <td height=30 width=30 rowspan="2" colspan="3"><img src="../public/images/corner.png" height="60.76" width ="90.74"></td>
                     </tr>
                     <tr class="row">
                         <td height=30 width=30></td>
@@ -214,47 +218,37 @@
                         <td height=30 width=30></td>
                         <td height=30 width=30></td>
                         <td height=30 width=30></td>
-                        <td height=30 width=30></td>
-                        <td height=30 width=30></td>
-                        <td height=30 width=30></td>
-
-                    </tr>
-                    <tr class="row">
-                        <td height=30 width=30></td>
-                        <td height=30 width=30></td>
-                        <td height=30 width=30></td>
-                        <td height=30 width=30></td>
-                        <td height=30 width=30></td>
-                        <td height=30 width=30></td>
-                        <td height=30 width=30></td>
-                        <td height=30 width=30></td>
-                        <td height=30 width=30></td>
-                        <td height=30 width=30></td>
-                        <td height=30 width=30></td>
-                        <td height=30 width=30></td>
-
                     </tr>
                 </table>
             </div>
         </div>
     </div>
 
-
 </div>
 
-<div id="body"></div>
+<div id="footer">
+    <h1>Countdown Clock</h1>
+    <div id="clockdiv">
 
-<div id="footer"></div>
+        <div>
+            <span class="minutes"></span>
+            <div class="smalltext">Minutes</div>
+        </div>
+        <div>
+            <span class="seconds"></span>
+            <div class="smalltext">Seconds</div>
+        </div>
+    </div>
+</div>
 
 </body>
-
 
 <script>
     var ctx = document.getElementById("myChart");
     var myChart = new Chart(ctx, {
         type: 'horizontalBar',
         data: {
-            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+            labels: ["Gatorade", "Nike", "Pepsi", "Adidas", "Corona", "Heineken"],
             datasets: [{
                 label: '# of Votes',
                 data: [12, 19, 3, 5, 2, 3],
@@ -295,17 +289,89 @@
                 labels: {
                     fontColor: 'rgb(255, 99, 132)'
                 },
-                boxWidth: 5
+                boxWidth: 5,
             },
             barThickness: 1
         }
     });
 
-    jQuery(document).ready(function () {
 
+    jQuery(document).ready(function () {
+        var index = 0;
+        jQuery('#stadium').find('td').each(function () {
+            ++index;
+            jQuery(this).attr('id',index);
+        });
+
+        //coloring
+        colorCell("#FF0000",40);
+    });
+
+    function  showStadiumData(a,b) {
+        a.preventDefault();
+        alert('hi');
+    }
+
+    function  showStadiumData2(data) {
+        debugger;
+    }
+
+    function getTimeRemaining(endtime) {
+        var t = Date.parse(endtime) - Date.parse(new Date());
+        var seconds = Math.floor((t / 1000) % 60);
+        var minutes = Math.floor((t / 1000 / 60) % 60);
+        return {
+            'total': t,
+            'minutes': minutes,
+            'seconds': seconds
+        };
+    }
+
+    function colorCell(color,count)
+    {
+        jQuery('#stadium').find('td').each(function(index){
+            var ind = $(this).index();
+            //console.log(ind);
+            if(index%5==0 && count>0) {
+                $(this).css("background-color",color );
+                count--;
+            }
+        })
+    }
+
+    function initializeClock(id, endtime) {
+        var clock = document.getElementById(id);
+        var minutesSpan = clock.querySelector('.minutes');
+        var secondsSpan = clock.querySelector('.seconds');
+
+        function updateClock() {
+            var t = getTimeRemaining(endtime);
+
+            minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+            secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+            if (t.total <= 0) {
+                clearInterval(timeinterval);
+            }
+        }
+
+        updateClock();
+        var timeinterval = setInterval(updateClock, 1000);
+    }
+
+    var deadline = new Date(Date.parse(new Date()) + 10*60* 1000);
+    initializeClock('clockdiv', deadline);
+
+
+    //            labels: ["Gatorade", "Nike", "Pepsi", "Adidas", "Corona", "Heineken"],
+
+    jQuery('#gatoradeBtn').on('click', function (data) {
+            $("p").slideDown();
+    });
+
+    jQuery('#gatoradeBtn').on('click', function (data) {
 
     });
-    
 </script>
 
 </html>

@@ -16,8 +16,6 @@ router.get('/a', function (req, res, next) {
     //response.render('advertise');
 });
 
-
-
 /*
 db.collection('UserLikes',function(err,collection)
 {
